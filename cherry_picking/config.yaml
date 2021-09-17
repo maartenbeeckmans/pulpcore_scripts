@@ -1,0 +1,5 @@
+---
+host: http://pulp.example.com
+username: admin
+password: secret
+...

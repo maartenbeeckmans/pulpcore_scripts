@@ -1,0 +1,26 @@
+---
+content:
+  - desc: epel
+    name: mirror-el8-x86_64-epel
+    packages:
+      - name: htop
+      - name: iftop
+      - name: ncdu
+      - name: the_silver_searcher
+  - desc: epel-modular
+    name: mirror-el8-x86_64-epel-modular
+    modules:
+      - name: nextcloud
+      - name: cri-o
+        stream: 1.21
+      - name: nginx
+        stream: 1.20
+      - name: nodejs
+        stream: 13
+  - desc: pulpcore-3.14
+    name: mirror-el8-x86_64-pulpcore-3.14
+    packages:
+      - name: python3-pulpcore
+      - name: python3-django
+dest_repo: development-rocky-8-upstream-x86_64
+...
