@@ -1,0 +1,4 @@
+[pulpcore]
+host = http://pulp.example.com
+username = user
+password = pass

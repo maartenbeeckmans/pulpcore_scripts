@@ -1,46 +1,3 @@
-# Pulpcore scripts
-
-This repo contains different python scripts that can be used to perform some actions to pulpcore that are not supported by the CLI.
-
-## Cherry picking
-
-This is currently only implemented for the rpm plugin
-
-### Basic usage
-
-```bash
-./pulpcore_helper.py rpm cherry_pick
-
-```
-
-### Flags
-
-| Flag            | Explanation                                   | Default value     |
-|-----------------|-----------------------------------------------|-------------------|
-| -c, --config    | Path to pulpcore_helper.py configuration file | `config.ini`      |
-| -d, --data-file | Path to cherry_pick data file                 | `cherrypick.yaml` |
-
-
-### Configuration options
-
-#### Pulpcore
-
-- *host*: hostname of the pulpcore server
-- *username*: username for connecting with the pulpcore api
-- *password*: password for connecting with the pulpcore api
-
-#### Example
-
-```ini
-[pulpcore]
-host = http://pulp.example.com
-username = user
-password = pass
-```
-
-### Cherry picking data file
-
-```yaml
 ---
 # Hash containing the content that has to be copied
 content:
@@ -102,4 +59,3 @@ content:
 # Name of the destination repo where the packages should be added
 dest_repo: upstream
 ...
-```
